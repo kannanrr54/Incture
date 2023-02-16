@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product Management System</title>
+<style>
+body{
+	font-family: roboto;}
+.menu{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding: 50px;
+}
+.submenu{
+	padding:40px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	width: 40%;	
+	margin-top:30px;
+	float: left;
+	border-radius: 10px;
+	font-size: 25px;
+	background-color: #D8D6D6;
+	box-shadow: 5px 5px 5px -5px black;
+	text-align: center;
+}
+.submenu:hover {
+	background-color: #CECDCD;
+	cursor:pointer;
+}
+h1{
+	background-color: #596579;
+	margin: 0px; 
+	padding: 20px;
+	color: white;
+}
+.back{
+	float:right;
+	margin-right:20px; 
+}
+img{
+	width: 40%;}
+img:hover {
+	width: 43%;
+}
+</style>
+</head>
+<body>
+<h1>Product Management System<span class="back"><img src="images/logout.png" onclick="logout()"></span></h1>
+<div class="menu">
+<div class="submenu" onclick="addP()">Add Product</div>
+<div class="submenu" style="float:right" onclick="viewP()">View Products</div>
+</div></br></br>
+<div class="menu">
+<div class="submenu"  onclick="updateP()">Update Product Details</div>
+<div class="submenu" style="float:right" onclick="deleteP()">Delete Products</div>
+</div>
+</body>
+<script>
+function logout(){
+	window.location="index.html";
+}
+function addP(){
+	window.location="AddProduct.html";
+}
+function updateP(){
+	window.location="UpdateProduct";
+}
+function viewP(){
+	window.location="DisplayProducts";
+}
+function deleteP(){
+	window.location="DeleteProduct.html";
+}
+</script>
+</html>

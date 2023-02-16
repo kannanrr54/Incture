@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product Management System</title>
+</head>
+<style>
+body{
+	font-family:roboto;
+	}
+.ADD_PRODUCT{
+			width:100%;
+			padding:20px;
+			border:none;
+			background-color: #D8D5C3;
+			border-radius: 5px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top:10px;
+			}
+select{
+		width:100%;
+		padding:20px;
+		border:none;
+		background-color: #D8D5C3;
+		border-radius: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:10px;
+	  }
+input[type=submit]{
+			width:30%;
+			padding:20px;
+			border:none;
+			background-color: #596579;
+			border-radius: 5px;
+			margin-top: 10px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+div{
+	margin:auto;
+	width: 40%;
+	margin-top:40px;
+	}
+h1{
+   color: #596579;
+   margin-top: 10px;
+   margin-left: auto;
+   margin-right: auto;
+  }
+</style>
+
+<body>
+<div>
+<h1>ADD PRODUCT</h1>
+<form action="Addproduct" method="post">
+<input type="text" placeholder="Product Name" name="pname" class="ADD_PRODUCT" required="required"/><br/>
+<input type="text" placeholder="Product Price" name="price" class="ADD_PRODUCT" required="required"/><br/>
+<input type="text" placeholder="Product Brand" name="brand" class="ADD_PRODUCT" required="required"/><br/>
+<select name="category" class="ADD_PRODUCT">
+	<option value="" selected>Category</option>
+	<option value="laptop">Lap Top</option>
+	<option value="speaker">Speaker</option>
+	<option value="desktop">Desk Top</option>
+	<option value="headphone">Head Phone</option>
+	</select><br>
+<textarea class="ADD_PRODUCT" name="description" placeholder="Description"></textarea><br/>
+<input type="submit" value="ADD PRODUCT"/>
+</form>
+</div>
+</body>
+</html>

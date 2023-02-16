@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Product Management System</title>
+		<style>
+		body{
+			font-family:roboto;
+		}
+		.Login{
+			width: 100%;
+			padding-top	:20px;
+			padding-bottom:20px;
+			border:none;
+			background-color: #D8D5C3;
+			border-radius: 5px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top:10px;
+		}
+		form{
+		width:100%;
+		}
+		.btn{
+			width:20%;
+			padding:20px;
+			border:none;
+			color: white;
+			background-color: #596579;
+			border-radius: 5px;
+			margin-top: 10px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 15px;
+		}
+		div{
+			margin:auto;
+			width: 40%;
+			padding:40px;
+			border-radius:10px;
+			box-shadow: 5px 5px 5px -5px black;
+			margin-top:40px;
+			background-color: #E4E4E4;
+		}
+		h1{
+			background-color: #596579;
+			margin: 0px; 
+			padding: 20px;
+			color: white;
+		}
+		</style>
+	</head>
+	<body>
+	<h1>Product Management System</h1>
+		<div>
+			<form method="post" action="LoginValidation">
+				<input type="text" placeholder="Username" name="user" class="Login" required="required"/><br/>
+				<input type="password" placeholder="Password" name="pass" class="Login" required="required"/><br/>
+				<input type="submit" value="Login" class="btn"/>
+			</form>
+		</div>
+	</body>
+</html>
