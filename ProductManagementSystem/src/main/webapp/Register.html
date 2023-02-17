@@ -48,10 +48,20 @@
 			padding: 20px;
 			color: white;
 		}
+		img{
+		cursor:pointer;
+	width: 40%;}
+img:hover {
+	width: 43%;
+}
+.back{
+	float:right;
+	margin-right:20px; 
+}
 		</style>
 	</head>
 	<body>
-	<h1>Product Management System</h1>
+	<h1>Product Management System<span class="back"><img src="images/back.png" onclick="back()"></span></h1>
 		<div>
 			<form method="post" action="Registration">
 				<input type="text" placeholder="Name" name="name" class="Register" required="required"/><br/>
@@ -60,12 +70,15 @@
 				<input type="password" placeholder="Password" name="pass" class="Register" required="required" minlength="8" /><br/>
 				<input type="password" placeholder="Confirm Password" name="cpass" class="Register" required="required" minlength="8"/><br/>
 				<input type="submit" value="Sign UP" class="btn"/>
-				<input type="submit" value="Login" onclick="login()" class="btn"/>
 			</form>
 		</div>
 	</body>
 	<script>
 function login(){
+	window.location="index.html";
+}
+
+function back(){
 	window.location="index.html";
 }
 </script>
