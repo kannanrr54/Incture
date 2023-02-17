@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product Management System</title>
+</head>
+<style>
+body{
+	font-family:roboto;
+	}
+table{
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+	padding:10px;
+	border:5px solid #596579;
+	border-radius: 10px 10px 0px 0px;
+	border-collapse:collapse;
+	
+	}
+th{
+	text-align:left;
+	color: white;
+	background-color: #596579;
+	padding:10px;
+	font-size: 20px;
+	}
+h1{
+	background-color: #596579;
+	margin: 0px; 
+	padding: 20px;
+	color: white;
+	margin-bottom: 20px;
+	}
+tr{
+	background-color: white;
+	}
+td{
+	padding:10px;
+	font-size: 20px;
+	}
+.back{
+	float:right;
+	margin-right:20px; 
+}
+img{
+	width: 40%;}
+img:hover {
+	width: 43%;
+}
+</style>
+
+<body>
+<div>
+<h1>VERIFY USERS<span class="back"><img src="images/back.png" onclick="back()" alt="Back"></span></h1>
+<form action="Verifyuser" method="POST">
+<input type="hidden" id="hidende" name="idToDel">
+<input type="submit" style="display:none" id="sub">
+</form>
+</div>
+</body>
+<script>
+function back(){
+	window.location="AdminHome.html";
+}
+function onDel(obj){
+	document.getElementById("hidende").value=obj.getAttribute('data-idr');
+	if(confirm("Are you sure you want to verify this user?")){
+	window.location="Verifyuser";
+	document.getElementById("sub").click();
+	}
+}
+</script>
+</html>

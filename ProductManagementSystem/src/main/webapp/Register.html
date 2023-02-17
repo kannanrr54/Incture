@@ -7,7 +7,7 @@
 		body{
 			font-family:roboto;
 		}
-		.Login{
+		.Register{
 			width: 100%;
 			padding-top	:20px;
 			padding-bottom:20px;
@@ -53,17 +53,20 @@
 	<body>
 	<h1>Product Management System</h1>
 		<div>
-			<form method="post" action="LoginValidation">
-				<input type="text" placeholder="Username" name="user" class="Login" required="required"/><br/>
-				<input type="password" placeholder="Password" name="pass" class="Login" required="required"/><br/>
-				<input type="submit" value="Login" class="btn"/>
-				<input type="submit" value="Sign UP" onclick="signup()" class="btn"/>
+			<form method="post" action="Registration">
+				<input type="text" placeholder="Name" name="name" class="Register" required="required"/><br/>
+				<input type="text" placeholder="Email" name="email" class="Register" required="required"/><br/>
+				<input type="text" placeholder="User name" name="username" class="Register" required="required"/><br/>
+				<input type="password" placeholder="Password" name="pass" class="Register" required="required" minlength="8" /><br/>
+				<input type="password" placeholder="Confirm Password" name="cpass" class="Register" required="required" minlength="8"/><br/>
+				<input type="submit" value="Sign UP" class="btn"/>
+				<input type="submit" value="Login" onclick="login()" class="btn"/>
 			</form>
 		</div>
 	</body>
 	<script>
-function signup(){
-	window.location="Register.html";
+function login(){
+	window.location="index.html";
 }
 </script>
-</html>
+	</html>

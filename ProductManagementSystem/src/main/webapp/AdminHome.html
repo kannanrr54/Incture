@@ -7,6 +7,7 @@
 body{
 	font-family: roboto;}
 .menu{
+	margin-top: 80px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 70%;
@@ -49,29 +50,23 @@ img:hover {
 <body>
 <h1>Product Management System<span class="back"><img src="images/logout.png" onclick="logout()"></span></h1>
 <div class="menu">
-<div class="submenu" onclick="addP()">Add Product</div>
-<div class="submenu" style="float:right" onclick="viewP()">View Products</div>
-</div></br></br>
-<div class="menu">
-<div class="submenu"  onclick="updateP()">Update Product Details</div>
-<div class="submenu" style="float:right" onclick="deleteP()">Delete Products</div>
+<div class="submenu" onclick="viewP()">View Users</div>
+<div class="submenu" style="float:right" onclick="verifyP()">Verify Users</div>
+<div class="submenu" style="margin-left:270px;" onclick="deleteP()">Delete Users</div>
 </div>
 </body>
 <script>
 function logout(){
 	window.location="index.html";
 }
-function addP(){
-	window.location="AddProduct.html";
-}
-function updateP(){
-	window.location="UpdateProduct";
-}
 function viewP(){
-	window.location="DisplayProducts";
+	window.location="ViewUser";
+}
+function verifyP(){
+	window.location="VerifyuserToDB";
 }
 function deleteP(){
-	window.location="DeletePro";
+	window.location="DeleteuserToDb";
 }
 </script>
 </html>

@@ -21,24 +21,28 @@ public class LoginValidation extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Connection con;
 		try {
+			int access=0;
 			con = Dbconnection.initializeDatabase();
 			Statement stmt=con.createStatement();
-			String VendorQuery="Select * from userdetails where username='"+request.getParameter("user")+"' and password='"+request.getParameter("pass")+"' and role='vendor'";
+			String VendorQuery="Select * from userdetails where username='"+request.getParameter("user")+"' and password='"+request.getParameter("pass")+"' and role='vendor' and access =1";
 			String AdminQuery="Select * from userdetails where username='"+request.getParameter("user")+"' and password='"+request.getParameter("pass")+"' and role='admin'";
 			ResultSet resultSet1 = stmt.executeQuery(VendorQuery);
-			ResultSet resultSet2 = stmt.executeQuery(AdminQuery);
-			if(resultSet1.next())
+			if(resultSet1.next()) {
 				response.sendRedirect("VendorHome.html");
-			else if(resultSet2.next())
+				access=1;
+				}
+			ResultSet resultSet2 = stmt.executeQuery(AdminQuery);
+			if(resultSet2.next()) {
 				response.sendRedirect("AdminHome.html");
-			else {
+				access=1;}
+			if(access==0) {
 					PrintWriter p=response.getWriter();
 					RequestDispatcher dispatcher = request.getRequestDispatcher("/index.html");
 			    	dispatcher.include( request, response );
 			    	p.print("<style>.Login{border:1px solid red}</style>");
 				}
 		} catch (ClassNotFoundException | SQLException e) {
-			e.printStackTrace();
+		e.printStackTrace();
 		}
 		
 		}
